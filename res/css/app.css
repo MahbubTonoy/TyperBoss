@@ -1,1 +1,21 @@
-/* primary Background: #2d3436 */
+/* primary Background: #0984e3 */
+
+/* font import from google */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+
+/* universal reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.hero {
+  background: #0984e3;
+  text-align: center;
+}
+.hero img {
+  width: 300px;
+  margin: 20px;
+}
