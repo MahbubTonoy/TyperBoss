@@ -16,13 +16,13 @@
       <img src="/res/images/logo.png" alt="TyperBoss" />
       <div class="action_bar">
         <button id="play">Play!</button>
-        <div class="difficulty">Difficulty Level</div>
+        <div class="difficulty">Difficulty Level:</div>
 
         <!-- this section will not display in page -->
         <div class="no_display">
-          <input type="radio" name="level" id="easy" />
-          <input type="radio" name="level" id="medium" />
-          <input type="radio" name="level" id="hard" />
+          <input type="radio" name="level" onclick="difficulty(0)" id="easy" checked />
+          <input type="radio" name="level" onclick="difficulty(1)" id="medium" />
+          <input type="radio" name="level" onclick="difficulty(2)" id="hard" />
         </div>
         <!-- no display end -->
 
@@ -58,6 +58,7 @@
           Will Over
         </li>
         <li>Remaining Seconds Will Added With Score</li>
+        <li>Press Spacebar to Play/Pause The Game</li>
         <li>Words are Case Sensitive</li>
       </ul>
     </div>
