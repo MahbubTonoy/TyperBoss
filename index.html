@@ -36,15 +36,24 @@
       </div>
     </div>
     <!-- hero section end -->
-    <!-- main game section starts -->
+    <!-- main game section start -->
     <div class="main_game">
-      <div class="wordboard" id="word">Word</div>
+      <!-- countdown start -->
+      <div class="countdown_container">
+        Game Starts in:
+        <div class="starts_countdown"></div>
+      </div>
+      <!-- countdown end -->
+      <div id="word">Word</div>
       <input type="text" id="inputbar" placeholder="Write The Word" />
       <button id="playPause">Pause</button>
-      <div class="game_over">Game Over</div>
+      <div id="game_over">Game Over</div>
       <div class="scoreboard">
         <div class="time">
-          Time Left: <span id="time">5</span> Score: <span id="score">100</span>
+          Time Left: <span id="time">5</span>
+        </div>
+        <div class="score">
+          Score: <span id="score">100</span>
         </div>
       </div>
     </div>
