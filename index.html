@@ -24,9 +24,15 @@
 
         <!-- choose_difficulty -->
         <div class="choose_difficulty">
-          <button onclick="diff(0)" id="easy">Easy</button>
-          <button onclick="diff(1)" id="medium">Medium</button>
-          <button onclick="diff(2)" id="hard">Hard</button>
+          <button onclick="diff(0)" class="active" id="easy">
+            Easy <i class="fas fa-check"></i>
+          </button>
+          <button onclick="diff(1)" id="medium">
+            Medium <i class="fas fa-check"></i>
+          </button>
+          <button onclick="diff(2)" id="hard">
+            Hard <i class="fas fa-check"></i>
+          </button>
         </div>
         <!-- choose_difficulty end -->
       </div>
@@ -35,42 +41,42 @@
     <!-- top container start -->
     <div class="top_container">
       <!-- countdown start -->
-      <div class="countdown_container">
-        Game Starts in:
-        <div class="start_countdown">3</div>
+      <div class="countdown_container force_shrink">
+        <div class="countdown_padding">
+          Game Starts in:
+          <div class="start_countdown">5</div>
+        </div>
       </div>
       <!-- countdown end -->
       <!-- main game section start -->
-    <div class="main_game">
-      <div id="word">Word</div>
-      <input type="text" id="inputbar" placeholder="Write The Word" />
-      <button id="playPause">Pause</button>
-      <div id="game_over">Game Over</div>
-      <div class="scoreboard">
-        <div class="time">
-          Time Left: <span id="time">5</span>
-        </div>
-        <div class="score">
-          Score: <span id="score">100</span>
+      <div class="main_game force_shrink">
+        <div id="word">Word</div>
+        <input type="text" id="inputbar" placeholder="Write The Word" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" autocomplete="off"/>
+        <button id="playPause">Pause</button>
+        <div id="game_over">Game Over</div>
+        <div class="scoreboard">
+          <div class="time">Time Left: <span id="time">7</span> Sec</div>
+          <div class="score">Score: <span id="score">0</span></div>
         </div>
       </div>
-    </div>
-    <!-- main section end -->
-    <!-- game rules starts -->
-    <div class="game_rules">
-      <p>Game Rules:</p>
-      <ul>
-        <li>
-          Type Each word within <span id="sec">5</span> Second, Otherwise The Game Will Over.</li>
-        <li>Remaining Seconds Will Added With The Score.</li>
-        <li>Press Spacebar to Play/Pause The Game.</li>
-        <li>Words are Case Sensitive</li>
-      </ul>
-    </div>
-    <!-- game rules end -->
+      <!-- main section end -->
+      <!-- game rules starts -->
+      <div class="game_rules">
+        <p>Game Rules:</p>
+        <ul>
+          <li>
+            Type Each word within <span id="sec">7</span> Second, Otherwise The
+            Game Will Over.
+          </li>
+          <li>Remaining Seconds Will Added With The Score.</li>
+          <li>Press Spacebar to Play/Pause The Game.</li>
+          <li>Words are Case Sensitive</li>
+        </ul>
+      </div>
+      <!-- game rules end -->
     </div>
     <!-- top container end -->
-    
+
     <!-- footer starts -->
     <div class="footer">
       Developed By
@@ -85,8 +91,8 @@
     <!-- javascript -->
 
     <!-- words remains here -->
-    <script type="text/javascript" href="res/js/words.js"></script>
+    <script type="text/javascript" src="res/js/words.js"></script>
     <!-- main function here -->
-    <script type="text/javascript" href="res/js/main.js"></script>
+    <script type="text/javascript" src="res/js/main.js"></script>
   </body>
 </html>

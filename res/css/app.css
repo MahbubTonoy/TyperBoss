@@ -29,7 +29,8 @@
 .action_bar {
   overflow: hidden;
   padding-bottom: 10px;
-  /* height: 0; */
+  height: 310px;
+  transition: all 0.3s ease-in-out;
 }
 /* action bar end */
 h3 {
@@ -75,9 +76,17 @@ h3 {
   color: #fff;
   border: none;
 }
+.choose_difficulty button i {
+  display: none;
+}
+.active i {
+  display: inline !important;
+  color: #006652;
+}
 /* difficulty buttons hover effect  */
-.choose_difficulty label:hover, .active {
-  background: rgba(255, 255, 255, 0.6);
+.choose_difficulty button:hover, .active {
+  background: rgba(255, 255, 255, 0.6) !important;
+  color: #404040 !important;
 }
 /*** hero area end */
 /*** main game section start */
@@ -86,7 +95,7 @@ h3 {
   max-width: 800px;
   margin: 0 auto;
   overflow: hidden;
-  height: 0;
+  height: 400px;
   transition: all 0.3s ease-in-out;
 }
 /* top container */
@@ -102,15 +111,18 @@ h3 {
 .countdown_container {
   position: absolute;
   top: 0;
-  left: -100%;
-  height: 100%;
+  left: 0;
+  height: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
   font-size: 45px;
   font-weight: 600;
   color: #fff;
-  padding-top: 60px;
   transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.countdown_padding {
+  padding-top: 60px;
 }
 .start_countdown {
   font-size: 80px;
@@ -201,3 +213,59 @@ h3 {
   font-weight: 700;
 }
 /***footer end */
+
+
+/* some css that will trigger by javascript */
+.force_shrink {
+  height: 0 !important;
+}
+.force_expand {
+  height: 400px !important;
+}
+.slide_left {
+  left: -100%;
+  width: 50%;
+}
+.game_over_display {
+  display: block !important;
+}
+/* js trigger css end */
+
+/* responsive stylesheet */
+@media only screen and (max-width: 850px) {
+  .game_rules {
+    margin: 30px 15px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .hero img {
+    width: 250px;
+  }
+  h3 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  #play {
+    padding: 20px 100px;
+    font-size: 30px;
+  }
+  #play:hover i {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  #play {
+    padding: 14px 80px;
+    font-size: 25px;
+  }
+  #play:hover i {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+  .countdown_container {
+  font-size: 35px;
+  }
+}
