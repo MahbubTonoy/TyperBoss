@@ -112,10 +112,11 @@ function playPause() {
 }
 // play functionality ends
 
-// space bar play pause
+// space bar play pause - complete this later (maybe)
 inputbox.addEventListener("keypress", function (event) {
   var keycode = event.which || event.keyCode;
   if (keycode == 32) {
+    //we need to add some code here.
   }
 });
 
