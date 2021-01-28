@@ -29,6 +29,7 @@ let second = 7; //default easy mode second
 // 1=medium -> 5 sec
 // 2=hard -> 3 sec
 function diff(value) {
+  // change values on page
   difficulty = value;
   if (difficulty == 0) {
     second = 7;
@@ -36,21 +37,21 @@ function diff(value) {
     query("medium").classList.remove("active");
     query("hard").classList.remove("active");
     query("sec").innerHTML = second;
-    query("time").innerHTML=second;
+    query("time").innerHTML = second;
   } else if (difficulty == 1) {
     second = 5;
     query("easy").classList.remove("active");
     query("medium").classList.add("active");
     query("hard").classList.remove("active");
     query("sec").innerHTML = second;
-    query("time").innerHTML=second;
+    query("time").innerHTML = second;
   } else if (difficulty == 2) {
     second = 3;
     query("easy").classList.remove("active");
     query("medium").classList.remove("active");
     query("hard").classList.add("active");
     query("sec").innerHTML = second;
-    query("time").innerHTML=second;
+    query("time").innerHTML = second;
   }
 }
 // choose difficulty end
@@ -76,7 +77,7 @@ query("play").addEventListener("click", () => {
       query("word").innerHTML = choosenWord; //print random word
 
       inputbox.focus(); //focus on input box
-      play();
+      playPause();
       status = 2; //change game status into playing
       clearInterval(inverval); //stop counting when it's 0
     }
@@ -90,35 +91,43 @@ function random() {
 }
 // random function closed
 
+// playpause button
+// query("playPause").addEventListener("click", playPause);
 
 //play functionality start
 let secondShrink = second;
 let score = 0;
-function play() {
-  
-  let playInterval = setInterval(function(){
+function playPause() {
+  let playInterval = setInterval(function () {
     secondShrink--;
-    query("time").innerHTML=secondShrink;
-    if(secondShrink == 0) {
+    query("time").innerHTML = secondShrink;
+    // game over
+    if (secondShrink == 0) {
       query("game_over").classList.add("game_over_display");
-      inputbox.disabled=true;
+      inputbox.disabled = true;
       clearInterval(playInterval);
+      status = 4; //change game status into game over
     }
   }, 1000);
 }
 // play functionality ends
 
+// space bar play pause
+inputbox.addEventListener("keypress", function (event) {
+  var keycode = event.which || event.keyCode;
+  if (keycode == 32) {
+  }
+});
+
 //insert text on inputbox
-inputbox.addEventListener("input", function(event){
-  // inputbox.value = inputbox.value+String.fromCharCode(x);
-  if(inputbox.value == choosenWord) {
-    console.log("+++ Trigger");
+inputbox.addEventListener("input", function () {
+  if (inputbox.value == choosenWord) {
     choosenWord = random(); //choose random word
     query("word").innerHTML = choosenWord; //print random word
-    inputbox.value="";
+    inputbox.value = "";
     score += secondShrink;
     secondShrink = second;
-    query("time").innerHTML=secondShrink;
-    query("score").innerHTML=score;
+    query("time").innerHTML = secondShrink;
+    query("score").innerHTML = score;
   }
 });
