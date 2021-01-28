@@ -60,7 +60,7 @@ h3 {
 }
 /* hidden radio button */
 .no_display {
-  display: none;
+  /* display: none; */
 }
 /* difficulty btns  */
 .difficulty {
@@ -79,7 +79,7 @@ h3 {
   color: #fff;
 }
 /* difficulty buttons hover effect  */
-.choose_difficulty label:hover {
+.choose_difficulty label:hover, .active {
   background: rgba(255, 255, 255, 0.6);
 }
 /*** hero area end */
@@ -184,6 +184,7 @@ h3 {
   border-radius: 3px;
   font-size: 18px;
   margin-top: 30px;
+  text-align: left;
 }
 .game_rules ul {
   margin-left: 30px;
