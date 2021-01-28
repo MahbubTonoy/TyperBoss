@@ -58,17 +58,13 @@ h3 {
 #play:hover i {
   font-size: 40px;
 }
-/* hidden radio button */
-.no_display {
-  /* display: none; */
-}
 /* difficulty btns  */
 .difficulty {
   font-size: 20px;
   margin-bottom: 20px;
   color: #fff;
 }
-.choose_difficulty label {
+.choose_difficulty button {
   margin: 5px;
   padding: 5px 10px;
   background: rgba(255, 255, 255, 0.3);
@@ -77,6 +73,7 @@ h3 {
   transition: all 0.3s ease-in-out;
   font-weight: 600;
   color: #fff;
+  border: none;
 }
 /* difficulty buttons hover effect  */
 .choose_difficulty label:hover, .active {

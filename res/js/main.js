@@ -1,3 +1,4 @@
+console.log("Hello World");
 let status = 0;
 /*
   status code:
@@ -18,18 +19,18 @@ function diff(value) {
   difficulty = value;
   if (difficulty == 0) {
     second = 7;
-    document.querySelector("[for='easy']").classList.add("active");
-    document.querySelector("[for='medium']").classList.remove("active");
-    document.querySelector("[for='hard']").classList.remove("active");
+    document.getElementById("easy").classList.add("active");
+    document.getElementById("medium").classList.remove("active");
+    document.getElementById("hard").classList.remove("active");
   } else if (difficulty == 1) {
     second = 5;
-    document.querySelector("[for='easy']").classList.remove("active");
-    document.querySelector("[for='medium']").classList.add("active");
-    document.querySelector("[for='hard']").classList.remove("active");
+    document.getElementById("easy").classList.remove("active");
+    document.getElementById("medium").classList.add("active");
+    document.getElementById("hard").classList.remove("active");
   } else if (difficulty == 2) {
     second = 3;
-    document.querySelector("[for='easy']").classList.remove("active");
-    document.querySelector("[for='medium']").classList.remove("active");
-    document.querySelector("[for='hard']").classList.add("active");
+    document.getElementById("easy").classList.remove("active");
+    document.getElementById("medium").classList.remove("active");
+    document.getElementById("hard").classList.add("active");
   }
 }

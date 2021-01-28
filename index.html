@@ -22,19 +22,11 @@
         <button id="play">Play <i class="fas fa-play"></i></button>
         <div class="difficulty">Difficulty Level:</div>
 
-        <!-- this section will not display in page -->
-        <div class="no_display">
-          <input type="radio" name="label" onclick="diff(0)" id="easy" checked />
-          <input type="radio" name="label" onclick="diff(1)" id="medium" />
-          <input type="radio" name="label" onclick="diff(2)" id="hard" />
-        </div>
-        <!-- no display end -->
-
         <!-- choose_difficulty -->
         <div class="choose_difficulty">
-          <label for="easy">Easy</label>
-          <label for="medium">Medium</label>
-          <label for="hard">Hard</label>
+          <button onclick="diff(0)" id="easy">Easy</button>
+          <button onclick="diff(1)" id="medium">Medium</button>
+          <button onclick="diff(2)" id="hard">Hard</button>
         </div>
         <!-- choose_difficulty end -->
       </div>
