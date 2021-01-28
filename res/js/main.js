@@ -60,7 +60,7 @@ let inputbox = query("inputbar");
 // main play button actions
 let start = 4;
 let choosenWord = "";
-query("play").addEventListener("input", () => {
+query("play").addEventListener("click", () => {
   status = 1; //change game status into starting
   query(".action_bar").classList.add("force_shrink"); //main play button shrink
   query(".main_game").classList.remove("force_shrink"); //expand gamebar
@@ -109,10 +109,7 @@ function play() {
 // play functionality ends
 
 //insert text on inputbox
-inputbox.addEventListener("keydown", function(event){
-  var x = event.which || event.keyCode;
-  //String.fromCharCode(x))
-  console.log(inputbox.value, choosenWord+Math.random());
+inputbox.addEventListener("input", function(event){
   // inputbox.value = inputbox.value+String.fromCharCode(x);
   if(inputbox.value == choosenWord) {
     console.log("+++ Trigger");
