@@ -84,7 +84,8 @@ h3 {
   color: #006652;
 }
 /* difficulty buttons hover effect  */
-.choose_difficulty button:hover, .active {
+.choose_difficulty button:hover,
+.active {
   background: rgba(255, 255, 255, 0.6) !important;
   color: #404040 !important;
 }
@@ -129,7 +130,11 @@ h3 {
 }
 /* countdown end */
 /* the main word  */
+/* .word_container {
+  text-align: left;
+} */
 #word {
+  display: inline-block;
   font-size: 85px;
   color: #404040;
   user-select: none;
@@ -215,7 +220,6 @@ h3 {
 }
 /***footer end */
 
-
 /* some css that will trigger by javascript */
 .force_shrink {
   height: 0 !important;
@@ -231,6 +235,25 @@ h3 {
   display: block !important;
 }
 /* js trigger css end */
+
+/* word animation */
+.word_animation {
+  animation: words 3s linear infinite alternate-reverse;
+}
+@keyframes words {
+  0% {
+    color: red;
+  }
+  25% {
+    color: yellow;
+  }
+  50% {
+    color: blue;
+  }
+  100% {
+    color: green;
+  }
+}
 
 /* responsive stylesheet */
 @media only screen and (max-width: 850px) {
@@ -267,6 +290,6 @@ h3 {
     margin: 15px 0;
   }
   .countdown_container {
-  font-size: 35px;
+    font-size: 35px;
   }
 }

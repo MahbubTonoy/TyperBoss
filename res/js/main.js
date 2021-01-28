@@ -130,5 +130,11 @@ inputbox.addEventListener("input", function () {
     secondShrink = second;
     query("time").innerHTML = secondShrink;
     query("score").innerHTML = score;
+    wordAnimation();
   }
 });
+function wordAnimation() {
+  if(score >= 100) {
+    query("word").classList.add("word_animation");
+  }
+}
