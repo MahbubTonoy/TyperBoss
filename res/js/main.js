@@ -122,7 +122,7 @@ inputbox.addEventListener("keypress", function (event) {
 
 //insert text on inputbox
 inputbox.addEventListener("input", function () {
-  if (inputbox.value == choosenWord) {
+  if (inputbox.value.toLowerCase() == choosenWord.toLowerCase()) {
     choosenWord = random(); //choose random word
     query("word").innerHTML = choosenWord; //print random word
     inputbox.value = "";
